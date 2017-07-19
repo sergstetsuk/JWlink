@@ -45,4 +45,4 @@
     #include "clibext.h"
 #endif
 
-WResSetRtns( open, close, read, write, lseek, tell, malloc, free );
+//WResSetRtns( open, close, read, write, lseek, tell, malloc, free );

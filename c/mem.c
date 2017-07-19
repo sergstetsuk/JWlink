@@ -35,6 +35,7 @@
 #ifdef __WATCOMC__
     #include <malloc.h>     /* for _expand() */
 #endif
+    #include <malloc.h>     /* for _expand() */
 #ifdef TRMEM
     #include "trmem.h"
 #endif
@@ -189,7 +190,9 @@ void *LnkExpand( void *src, size_t size )
 #ifdef TRMEM
     return( _trmem_expand( src, size, _trmem_guess_who(), TrHdl ) );
 #else
-    return( _expand( src, size ) );
+    //todo: return( _expand( src, size ) );
+    src = realloc(src, size);
+    return src;
 #endif
 }
 

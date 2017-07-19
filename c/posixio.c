@@ -84,7 +84,7 @@ static int DoOpen( char *name, unsigned mode, bool isexe )
     perm = 0666;
     CheckBreak();
     if( isexe ) perm |= 0111;
-    mode |= O_BINARY;
+    //mode |= O_BINARY; //not posix
     for( ;; ) {
         if( OpenFiles >= MAX_OPEN_FILES ) CleanCachedHandles();
         if ( ( mode & O_CREAT ) && !stat( name, &st) )

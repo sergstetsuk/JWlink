@@ -43,7 +43,7 @@ WResFileID  ResOpenFileRW( const char * filename )
 {
     WResFileID          ret;
 
-    ret = (* WRESOPEN) ( filename, O_CREAT | O_RDWR | O_BINARY,
+    ret = (* WRESOPEN) ( filename, O_CREAT | O_RDWR | /*O_BINARY,*/
                         S_IWRITE | S_IREAD );
     if( ret == -1 ) {
         WRES_ERROR( WRS_OPEN_FAILED );
