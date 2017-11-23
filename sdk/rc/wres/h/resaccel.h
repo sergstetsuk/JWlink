@@ -51,7 +51,7 @@ typedef struct AccelTableEntry {
     uint_8      Flags;
     uint_16     Ascii;
     uint_16     Id;
-} /*_WCUNALIGNED*/ AccelTableEntry;
+} _WCUNALIGNED AccelTableEntry;
 
 #if !defined( NATURAL_PACK )
 #include "poppck.h"

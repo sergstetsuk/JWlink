@@ -44,7 +44,7 @@ WResFileID WResOpenNewFile( const char * filename )
     WResFileID      newhandle;
 
     newhandle = (* WRESOPEN) ( filename, O_CREAT | O_WRONLY | O_TRUNC
-                        | /*O_BINARY,*/ S_IWRITE | S_IREAD );
+                        | O_BINARY, S_IWRITE | S_IREAD );
     if (newhandle == -1) {
         WRES_ERROR( WRS_OPEN_FAILED );
     } else {

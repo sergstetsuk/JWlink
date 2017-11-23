@@ -43,7 +43,7 @@ typedef struct {
     uint_32     time;           /* file's time taken from stat */
     uint_16     len;            /* sizeof the name array */
     char        name[1];        /* dynamic array */
-} /*_WCUNALIGNED*/ DepInfo;
+} _WCUNALIGNED DepInfo;
 
 #include "poppck.h"
 

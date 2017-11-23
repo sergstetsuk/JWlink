@@ -19,7 +19,7 @@ extra_c_flags = -DDEBUG_OUT -g
 OUTD=GccUnixD
 endif
 
-c_flags =-D__UNIX__ -D_BSD_SOURCE -DINSIDE_WLINK $(extra_c_flags)
+c_flags =-D__UNIX__ -D_BSD_SOURCE -DINSIDE_WLINK $(extra_c_flags) -D_WCUNALIGNED= -DO_BINARY=0
 
 # CC=clang allowed
 CC ?= gcc
